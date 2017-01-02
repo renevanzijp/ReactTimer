@@ -13,7 +13,13 @@ module.exports = {
         new webpack.ProvidePlugin({
             '$': 'jquery',
             'jQuery': 'jquery'
-        })
+        }),
+        function() {
+            this.plugin('watch-run', function(watching, callback) {
+                console.log('Begin compile at ' + new Date());
+                callback();
+            })
+        }
     ],
     output: {
         path: __dirname,
