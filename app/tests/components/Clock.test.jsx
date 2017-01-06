@@ -53,5 +53,6 @@ describe('Clock', () => {
             var actual = clock.formatSeconds(seconds);
 
             expect(actual).toBe(expected);
-        });    });
+        });
+    });
 });
